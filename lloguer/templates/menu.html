@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Llista d'automobils</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Llista d'automobils</h1>
+        <table>
+            <tr>
+                <th>Marca</th>
+                <th>Model</th>
+                <th>Matricula</th>
+            </tr>
+            {% for automobil in automobils %}
+            <tr>
+                <td>{{ automobil.marca }}</td>
+                <td>{{ automobil.model }}</td>
+                <td>{{ automobil.matricula }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+</html>
